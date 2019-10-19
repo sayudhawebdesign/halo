@@ -1,0 +1,38 @@
+// ===== Responsive Styles ===========================================================================
+// Author: Sayudha Lukita Wibisana
+// 2019
+// Info: Main styling for Halo Web
+// ===================================================================================================
+
+// import bootstrap variables, grid and mixins
+@import "default/font";
+@import "default/variable";
+@import "mixin/mixin";
+
+body {
+  // header section
+  header {
+    @import "component/header";
+  }
+
+  // main section
+  main[role="main"] {
+    // anticipate page that has very few content ( short height )
+    // to avoid hanging footer
+    min-height: calc(100vh - 527px);
+  }
+
+  // each page style goes here
+  // example : @import "page/homepage"
+
+  // footer section
+  footer {
+    @import "component/footer";
+  }
+
+  // default style
+  @import "default/default";
+
+  // responsive style
+  @import "responsive/responsive";
+}
