@@ -8,6 +8,8 @@
 @import "default/font";
 @import "default/variable";
 @import "mixin/mixin";
+// default style
+@import "default/default";
 
 body {
   // header section
@@ -22,17 +24,12 @@ body {
     min-height: calc(100vh - 527px);
   }
 
-  // each page style goes here
-  // example : @import "page/homepage"
-
   // footer section
   footer {
     @import "component/footer";
   }
 
-  // default style
-  @import "default/default";
-
+  @import "page_/landingpage";
   // responsive style
   @import "responsive/responsive";
 }
