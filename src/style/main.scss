@@ -1,0 +1,39 @@
+// ===== Responsive Styles ===========================================================================
+// Author: Sayudha Lukita Wibisana
+// 2019
+// Info: Main styling for HALO
+// ===================================================================================================
+
+// import bootstrap variables, grid and mixins
+@import '~font-awesome/css/font-awesome.css';
+@import '~bootstrap/scss/bootstrap';
+@import 'default/fonts';
+@import 'default/variables';
+@import 'mixin/mixin';
+@import './component/temp-iframe';
+@import './component/header.scss';
+@import './component/big-container.scss';
+
+body {
+    background-color: #d1d1d1;
+    // main section
+    main[role='main'] {
+        // each page style goes here
+        // example : @import "page/homepage"
+        // @import 'page/index.scss';
+        //or using
+        //global loader will import all scss files
+        @import './page/*.scss';
+    }
+
+    // footer section
+    footer {
+        @import 'component/footer.scss';
+    }
+
+    // default style
+    @import 'default/default.scss';
+
+    // responsive style
+    @import 'responsive/responsive.scss';
+}

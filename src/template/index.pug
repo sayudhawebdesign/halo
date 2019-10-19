@@ -1,0 +1,33 @@
+//- index.pug
+- var title = "Project Boilerplate"
+- var page = "Project Boileplate"
+include ./includes/variable.pug
+
+doctype html
+html(lang="en")
+
+	// html head
+	head
+		include ./includes/head.pug
+
+	// body
+	body
+
+		// Header
+		include ./includes/header.pug
+
+		// page main
+		main(role="main")
+			
+			.big-container
+				h1 Halo.
+
+			.big-container
+				.music-event
+					span.body-text.number 01.
+
+					.container
+						.title-con
+							span.body-text Events.
+		// page script
+		include ./includes/script.pug

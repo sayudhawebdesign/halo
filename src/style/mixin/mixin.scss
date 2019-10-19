@@ -1,0 +1,55 @@
+// mixin for text style guide
+
+@mixin default-text($text-name) {
+    $text-styles: map-get($default-text-styles, $text-name);
+
+    font-family: map-get($text-styles, 'font-family');
+    font-weight: map-get($text-styles, 'font-weight');
+    font-size: map-get($text-styles, 'font-size');
+    line-height: map-get($text-styles, 'line-height');
+
+    @if $text-name == 'button' {
+        text-transform: uppercase;
+    }
+}
+// define typograph general style below
+// you can add more / remove these according to the needs
+$default-text-styles: (
+    'h1': (
+        'font-family': 'Fascinate Inline',
+        'font-weight': 400,
+        'font-size': 40px,
+        'line-height': 'normal'
+    ),
+    'h2': (
+        'font-family': 'Fascinate Inline',
+        'font-weight': 400,
+        'font-size': 30px,
+        'line-height': 'normal'
+    ),
+    'h3': (
+        'font-family': 'Teko',
+        'font-weight': 400,
+        'font-size': 50px
+    ),
+    'h4': (
+        'font-family': 'Teko',
+        'font-weight': 600,
+        'font-size': 17px
+    ),
+    'body-text': (
+        'font-family': 'Teko',
+        'font-weight': 500,
+        'font-size': 12px
+    ),
+    'button-text': (
+        'font-family': 'Teko',
+        'font-weight': 600,
+        'font-size': 12px
+    ),
+    'footer-text': (
+        'font-family': 'Teko',
+        'font-weight': 400,
+        'font-size': 11px
+    )
+);
